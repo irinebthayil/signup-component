@@ -1,1 +1,84 @@
+.parent-div{
+  height: 100%;
+  background-image: url('./assets/bg-intro-mobile.png');
+  background-color: var(--color-red);
+}
 
+.main-div{
+  text-align: center;
+  color: white;
+  padding: 20% 8%;
+  background-image: url('./assets/bg-intro-mobile.png');
+  background-color: var(--color-red);
+}
+
+.header-desc{
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+#tryButton{
+  margin-top: 24px;
+  color: white;
+  padding: 16px;
+  width: 100%;
+  background-color: var(--color-blue);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0px 6px #00000029;
+  cursor: pointer;
+}
+
+.form-parent-div{
+  margin-top: 24px;
+}
+
+.form{
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+#formButton{
+  color: white;
+  background-color: var(--color-green);
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0px 4px hsla(155, 58%, 38%, 0.784);
+  margin-top: 16px;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .parent-div{
+    background-image: url('./assets/bg-intro-desktop.png');
+    background-color: var(--color-red);
+  }
+
+  .main-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 8%;
+  }
+
+  .child-div{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    gap: 16px
+  }
+
+  .header{
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  *{
+    font-size: 1rem;
+  }
+}
