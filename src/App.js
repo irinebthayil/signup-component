@@ -71,7 +71,14 @@ const Form = () => {
       document.getElementById('lastNameHelperText').style.display = "none"
     }
 
-    if (userDetails.email.trim() == "" || !userDetails.email.match(mailformat)) {
+    if (userDetails.email.trim() == "") {
+      document.getElementById('emailHelperText').innerText = "Email cannot be empty"
+      document.getElementById('emailHelperText').style.display = "block"
+      setDisplay3({ display: '' });
+    }
+    else if (!userDetails.email.match(mailformat))
+    {
+      document.getElementById('emailHelperText').innerText = "Looks like this is not an email"
       document.getElementById('emailHelperText').style.display = "block"
       setDisplay3({ display: '' });
     }
@@ -106,7 +113,7 @@ const Form = () => {
 
         <FormControl fullWidth margin='normal'>
           <TextField id='email' className='text-fields' sx={textFieldsStyle} fullWidth placeholder='Email Address' variant="outlined" InputProps={{ endAdornment: <InputAdornment position='end' sx={display3}><SvgIcon component={errorIcon}></SvgIcon></InputAdornment> }} onChange={onInputChanged} />
-          <FormHelperText id="emailHelperText" className='formHelperText' sx={helperTextStyle}>Looks like this is not an email</FormHelperText>
+          <FormHelperText id="emailHelperText" className='formHelperText' sx={helperTextStyle}>Email cannot be empty</FormHelperText>
         </FormControl>
 
         <FormControl fullWidth margin='normal'>
